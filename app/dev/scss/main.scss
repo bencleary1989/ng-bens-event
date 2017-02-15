@@ -1,0 +1,566 @@
+@import '../fonts/fonts';
+@import '../variables/variables';
+
+/* Mixins */
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* Body */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* General Styling */
+
+/* Hero Buttons */
+
+.hero-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:$emerald;
+}
+
+/* Navigation Bar */
+
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: $asphault;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1.5em;
+    color: #fff;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .page-title {
+    font-size:1.1em;
+    font-weight: 300;
+  }
+
+  .names {
+    text-align: center;
+  }
+
+  .login {
+
+  }
+
+}
+
+/* Footer */
+
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: $asphault;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.side-menu {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $asphault;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  z-index: 9999;
+
+  .menu-item, .hide-menu {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    @inlcude transition(all .1s ease);
+
+    &:hover {
+      background: $sunflower;
+      color: $asphault;
+    }
+
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1em;
+
+      &:hover {
+        color: $asphault;
+      }
+
+      .fa {
+        padding-left: 10px;
+      }
+
+    }
+  }
+
+  .hide-menu {
+    justify-content: flex-end;
+    padding-right: 10px;
+
+    font-size: 1.5em;
+  }
+
+}
+
+/* Main Holder */
+
+.main-holder {
+  display: flex;
+  width: 100%;
+  margin: 50px auto;
+  box-sizing: border-box;
+  padding: 10px;
+  flex-direction: column;
+
+  .welcome-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    background: $asphault;
+    margin-bottom: 10px;
+    p {
+      width:100%;
+      padding-left: 10px;
+      padding-top: 10px;
+      color: $sunflower;
+    }
+  }
+
+  .hero-banner {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background: url('/images/hero-banners/everest.jpg') no-repeat center;
+    background-size: cover;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      color: $sunflower;
+      font-weight: 300;
+      font-size: 3em;
+    }
+
+    p {
+      color: $sunflower;
+    }
+
+  }
+
+  .hero-item-holder {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+
+
+    a {
+      display: flex;
+      flex: 1;
+      height: 200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        flex: 3;
+      }
+    }
+
+    .hero-item {
+      display: flex;
+      flex: 1;
+      height: 200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+      &:hover {
+        flex: 3;
+      }
+
+      p {
+        font-size: 1.2em;
+        font-weight: 300;
+        color: $sunflower;
+      }
+
+    }
+
+    /* backgrounds */
+
+    .one {
+      background: url('/images/hero-items/boat.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    .two {
+      background: url('/images/hero-items/mountains.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    .three {
+      background: url('/images/hero-items/rope.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+    .four {
+      background: url('/images/hero-items/waves.jpg') no-repeat center;
+      background-size: cover;
+    }
+
+  }
+
+  .venue-button {
+    background: url('/images/main/venue.jpg') no-repeat center;
+    background-size:cover;
+  }
+
+  .register-button {
+    background: url('/images/main/register.jpg') no-repeat center;
+    background-size:cover;
+  }
+
+}
+
+/* Board */
+
+.board {
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #E7E7E7;
+
+  .board-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border: none;
+    justify-content: center;
+
+    p {
+      color: $asphault;
+      font-weight: 700;
+      font-size: 1.1em;
+    }
+
+  }
+
+  .board-content {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+
+    .network-champ {
+      margin-top: 1px;
+      display: flex;
+      width: 100%;
+      height: 50px;
+      flex-direction: row;
+
+      .champ-image {
+        margin-left: 10px;
+        width: 50px;
+        height: 50px;
+        background: url('https://thoseconspiracyguys.com/wp-content/uploads/2016/04/arnie-cigar-320x320.jpg') no-repeat center;
+        background-size: cover;
+      }
+
+      .champ-name {
+        flex: 3;
+        text-align: center;
+        padding-top: 15px;
+      }
+
+      .champ-score {
+        flex: 2;
+        text-align: center;
+        padding-top: 15px;
+      }
+
+    }
+
+  }
+
+  .board-footer {
+    display: flex;
+    align-items: center;
+    background: $asphault;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+
+    p {
+      color: $emerald;
+    }
+
+  }
+
+}
+
+/* registration Page */
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+.input {
+  margin-top: 5px;
+
+  label {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: $asphault;
+  }
+
+  input {
+    border-radius: 0;
+  }
+}
+
+/* Profile */
+
+.profile-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .profile-photo {
+    margin:0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    background: url('/images/hero-items/rope.jpg') no-repeat center;
+    background-size: cover;
+    margin-bottom: 10px;
+  }
+  .edit_form {
+    width:100%;
+    height:400px;
+  }
+
+}
+
+
+
+.action-buttons {
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  background: $asphault;
+
+  .button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+  }
+
+  .clear-cache {
+    background: red;
+    color: #000;
+
+    &:hover {
+      background: rgba(red, 0.5);
+    }
+
+  }
+
+  .logout {
+    margin-top: 10px;
+    background: $emerald;
+    color: $asphault;
+
+    &:hover {
+      background: rgba($emerald, 0.5);
+    }
+
+  }
+
+}
+
+/* speakers */
+.speaker-board {
+  height:270px;
+  .board-header {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+  .board-content {
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      padding:10px;
+    }
+
+    .speaker-topic {
+      font-size:1.1em;
+      font-weight:700;
+    }
+
+    .speaker-image {
+      width:120px;
+      height:120px;
+      border-radius: 160px;
+    }
+  }
+  .board-footer {
+    a {
+      color:#fff;
+      text-decoration: none;
+    }
+  }
+}
+
+/* profile details */
+
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .profile-image {
+    margin:10px auto;
+    width:120px;
+    height:120px;
+    border-radius: 120px;
+  }
+
+  .profile-name {
+    text-align: center;
+    font-weight: 300;
+    font-size:1.2em;
+    margin-top:5px;
+  }
+
+  .profile-dob {
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  .profile-locale {
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom:10px;
+  }
+}
+
+/* Agenda */
+
+.agenda-content {
+  height:150px;
+  width:100%;
+  display: flex;
+  border:1px solid rgba(0,0,0,0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:10px;
+
+  .agenda {
+    height:50px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid rgba(0,0,0,0.2);
+  }
+
+  .agenda-footer {
+    border-bottom:none;
+
+    p {
+      display: flex;
+      width:50%;
+      height:50px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-top:10px;
+    }
+
+    .book {
+      background:$emerald;
+      color:#000;
+      font-weight: 700;
+    }
+
+  }
+
+  .agenda-title {
+    font-weight:700;
+  }
+
+}

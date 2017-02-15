@@ -1,0 +1,13 @@
+<div ng-repeat="speaker in $ctrl.speakers track by $index">
+    <section class="board speaker-board">
+        <header class="board-header">{{ speaker.speaker_name }}</header>
+        <div class="board-content">
+            <div class="speaker-image" style="background: url('http://localhost:8000{{ speaker.speaker_image }}') no-repeat center; background-size: cover;"></div>
+            <div class="text speaker-date">{{ speaker.talk_date | date:'MM/dd/yyyy @ h:mma' }}</div>
+            <div class="text speaker-topic">{{ speaker.speaker_topic }}</div>
+        </div>
+        <footer class="board-footer">
+            <a href="/speaker/detail/{{ speaker.speaker_profile.profile_uid }}">View Profile</a>
+        </footer>
+    </section>
+</div>

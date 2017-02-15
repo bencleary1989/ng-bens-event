@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="awesomeEventApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='/app/assets/css/main.css' rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.1/angular-route.min.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment.min.js"></script>
+    <script src="/app/bundle.js"></script>
+    <base href="/"/>
+</head>
+
+<body>
+    <div class="nav-header">
+        <div class="menu-button menu"><span class="fa fa-bars"></span></div>
+        <a href="/profile">
+            <div class="menu-button login"><span class="fa fa-user-circle"></span></div>
+        </a>
+    </div>
+    <menu-bar></menu-bar>
+    <div class="main-holder">
+        <div ng-view></div>
+    </div>
+    <script>
+(function() {
+
+    $('.back').click(function() {
+        window.history.back();
+    });
+
+    $('.menu').click(function() {
+        menuslide();
+    })
+
+    $('.hide-menu').click(function() {
+        menuslide();
+    })
+
+    $('.menu-item').click(function() {
+        menuslide();
+    })
+
+    function menuslide() {
+        if(!$('.side-menu').hasClass('open')) {
+            $('.side-menu').addClass('open');
+            $('.side-menu').animate({
+                left: "0"
+            }, 100);
+        } else {
+            $('.side-menu').removeClass('open');
+            $('.side-menu').animate({
+                left: "-200"
+            }, 100);
+        }
+    }
+
+
+
+})();
+    </script>
+</body>
+
+</html>

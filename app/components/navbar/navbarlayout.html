@@ -1,0 +1,9 @@
+<div class="side-menu">
+    <div class="hide-menu" ng-click="$ctrl.hideMenu()"><span class="fa fa-times"></span></div>
+    <div class="menu-item" ng-repeat="menu in $ctrl.menu" ng-click="$ctrl.hideMenu()">
+        <a href="{{ menu.url }}">
+            {{ menu.name }}
+            <span class="fa {{ menu.icon }}"></span>
+        </a>
+    </div>
+</div>

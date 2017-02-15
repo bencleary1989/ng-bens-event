@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700");
+/* variables */
+/* Mixins */
+/* Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif; }
+
+/* General Styling */
+/* Hero Buttons */
+.hero-button {
+  margin-top: 10px;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2ecc71; }
+
+/* Navigation Bar */
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #34495e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .nav-header .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1.5em;
+    color: #fff; }
+    .nav-header .menu-button:hover {
+      cursor: pointer; }
+  .nav-header .page-title {
+    font-size: 1.1em;
+    font-weight: 300; }
+  .nav-header .names {
+    text-align: center; }
+
+/* Footer */
+.footer-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: #34495e;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .footer-bar .menu-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300; }
+    .footer-bar .menu-button:hover {
+      cursor: pointer; }
+
+.side-menu {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #34495e;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  z-index: 9999; }
+  .side-menu .menu-item, .side-menu .hide-menu {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    @inlcude transition(all .1s ease); }
+    .side-menu .menu-item:hover, .side-menu .hide-menu:hover {
+      background: #f1c40f;
+      color: #34495e; }
+    .side-menu .menu-item a, .side-menu .hide-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1em; }
+      .side-menu .menu-item a:hover, .side-menu .hide-menu a:hover {
+        color: #34495e; }
+      .side-menu .menu-item a .fa, .side-menu .hide-menu a .fa {
+        padding-left: 10px; }
+  .side-menu .hide-menu {
+    justify-content: flex-end;
+    padding-right: 10px;
+    font-size: 1.5em; }
+
+/* Main Holder */
+.main-holder {
+  display: flex;
+  width: 100%;
+  margin: 50px auto;
+  box-sizing: border-box;
+  padding: 10px;
+  flex-direction: column; }
+  .main-holder .welcome-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 50px;
+    background: #34495e;
+    margin-bottom: 10px; }
+    .main-holder .welcome-bar p {
+      width: 100%;
+      padding-left: 10px;
+      padding-top: 10px;
+      color: #f1c40f; }
+  .main-holder .hero-banner {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background: url("/images/hero-banners/everest.jpg") no-repeat center;
+    background-size: cover;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .main-holder .hero-banner h3 {
+      color: #f1c40f;
+      font-weight: 300;
+      font-size: 3em; }
+    .main-holder .hero-banner p {
+      color: #f1c40f; }
+  .main-holder .hero-item-holder {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    /* backgrounds */ }
+    .main-holder .hero-item-holder a {
+      display: flex;
+      flex: 1;
+      height: 200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center; }
+      .main-holder .hero-item-holder a:hover {
+        flex: 3; }
+    .main-holder .hero-item-holder .hero-item {
+      display: flex;
+      flex: 1;
+      height: 200px;
+      margin: auto;
+      justify-content: center;
+      align-items: center; }
+      .main-holder .hero-item-holder .hero-item:hover {
+        flex: 3; }
+      .main-holder .hero-item-holder .hero-item p {
+        font-size: 1.2em;
+        font-weight: 300;
+        color: #f1c40f; }
+    .main-holder .hero-item-holder .one {
+      background: url("/images/hero-items/boat.jpg") no-repeat center;
+      background-size: cover; }
+    .main-holder .hero-item-holder .two {
+      background: url("/images/hero-items/mountains.jpg") no-repeat center;
+      background-size: cover; }
+    .main-holder .hero-item-holder .three {
+      background: url("/images/hero-items/rope.jpg") no-repeat center;
+      background-size: cover; }
+    .main-holder .hero-item-holder .four {
+      background: url("/images/hero-items/waves.jpg") no-repeat center;
+      background-size: cover; }
+  .main-holder .venue-button {
+    background: url("/images/main/venue.jpg") no-repeat center;
+    background-size: cover; }
+  .main-holder .register-button {
+    background: url("/images/main/register.jpg") no-repeat center;
+    background-size: cover; }
+
+/* Board */
+.board {
+  margin-top: 10px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #E7E7E7; }
+  .board .board-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border: none;
+    justify-content: center; }
+    .board .board-header p {
+      color: #34495e;
+      font-weight: 700;
+      font-size: 1.1em; }
+  .board .board-content {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column; }
+    .board .board-content .network-champ {
+      margin-top: 1px;
+      display: flex;
+      width: 100%;
+      height: 50px;
+      flex-direction: row; }
+      .board .board-content .network-champ .champ-image {
+        margin-left: 10px;
+        width: 50px;
+        height: 50px;
+        background: url("https://thoseconspiracyguys.com/wp-content/uploads/2016/04/arnie-cigar-320x320.jpg") no-repeat center;
+        background-size: cover; }
+      .board .board-content .network-champ .champ-name {
+        flex: 3;
+        text-align: center;
+        padding-top: 15px; }
+      .board .board-content .network-champ .champ-score {
+        flex: 2;
+        text-align: center;
+        padding-top: 15px; }
+  .board .board-footer {
+    display: flex;
+    align-items: center;
+    background: #34495e;
+    width: 100%;
+    height: 50px;
+    justify-content: center; }
+    .board .board-footer p {
+      color: #2ecc71; }
+
+/* registration Page */
+form {
+  padding: 0;
+  margin: 0; }
+
+.input {
+  margin-top: 5px; }
+  .input label {
+    width: 100%;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #34495e; }
+  .input input {
+    border-radius: 0; }
+
+/* Profile */
+.profile-holder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .profile-holder .profile-photo {
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    background: url("/images/hero-items/rope.jpg") no-repeat center;
+    background-size: cover;
+    margin-bottom: 10px; }
+  .profile-holder .edit_form {
+    width: 100%;
+    height: 400px; }
+
+.action-buttons {
+  width: 100%;
+  height: 130px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  background: #34495e; }
+  .action-buttons .button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700; }
+  .action-buttons .clear-cache {
+    background: red;
+    color: #000; }
+    .action-buttons .clear-cache:hover {
+      background: rgba(255, 0, 0, 0.5); }
+  .action-buttons .logout {
+    margin-top: 10px;
+    background: #2ecc71;
+    color: #34495e; }
+    .action-buttons .logout:hover {
+      background: rgba(46, 204, 113, 0.5); }
+
+/* speakers */
+.speaker-board {
+  height: 270px; }
+  .speaker-board .board-header {
+    font-size: 1.2em;
+    font-weight: 700; }
+  .speaker-board .board-content {
+    align-items: center;
+    justify-content: center; }
+    .speaker-board .board-content .text {
+      padding: 10px; }
+    .speaker-board .board-content .speaker-topic {
+      font-size: 1.1em;
+      font-weight: 700; }
+    .speaker-board .board-content .speaker-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 160px; }
+  .speaker-board .board-footer a {
+    color: #fff;
+    text-decoration: none; }
+
+/* profile details */
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .profile-page .profile-image {
+    margin: 10px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 120px; }
+  .profile-page .profile-name {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-top: 5px; }
+  .profile-page .profile-dob {
+    text-align: center;
+    font-size: 0.8em; }
+  .profile-page .profile-locale {
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 10px; }
+
+/* Agenda */
+.agenda-content {
+  height: 150px;
+  width: 100%;
+  display: flex;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; }
+  .agenda-content .agenda {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  .agenda-content .agenda-footer {
+    border-bottom: none; }
+    .agenda-content .agenda-footer p {
+      display: flex;
+      width: 50%;
+      height: 50px;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px; }
+    .agenda-content .agenda-footer .book {
+      background: #2ecc71;
+      color: #000;
+      font-weight: 700; }
+  .agenda-content .agenda-title {
+    font-weight: 700; }
+
+/*# sourceMappingURL=main.css.map */

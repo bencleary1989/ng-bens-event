@@ -1,0 +1,20 @@
+<section class="hero-banner">
+  <h3>Peak Performance</h3>
+  <p>Sales & Marketing Event</p>
+  <p>Registration</p>
+</section>
+<p>Welcome to registration page for Peak Performance! You will find that when you leave you will be at the top of your game!
+  <p>Enter your details below to register for this amazing event.</p>
+  <p class="thankyou">{{ message }}</p>
+  <form name="register-user" method="post" action="/register" class="register-form" ng-show="!registered">
+    <div class="input">
+      <input type="text" placeholder="Full Name" name="attendee_name" required="required" class="form-control"/>
+    </div>
+    <div class="input">
+      <input type="email" placeholder="Email" name="attendee_email" required="required" class="form-control"/>
+    </div>
+    <div class="input">
+      <input type="submit" value="Register" class="form-control"/>
+    </div>
+  </form>
+</p>

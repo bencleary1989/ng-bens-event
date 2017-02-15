@@ -1,0 +1,26 @@
+<style>
+    .is-venue {
+        height:auto;
+    }
+    .venue-image {
+        width:100%;
+        height:240px;
+        background: no-repeat center;
+        background-size: cover;
+    }
+    .venue-details {
+        box-sizing: border-box;
+        padding:10px;
+    }
+</style>
+<section class="board is-venue">
+    <div class="venue-image" style="background-image: url('http://localhost:8000{{ venue.venue_photo }}');"></div>
+    <section class="venue-details">
+    <h3>{{ venue.venue_name }}</h3>
+        <p>{{venue.venue_description }}</p>
+        <a href="https://www.google.co.uk/maps/place/Exmouth+Ocean/@50.6121213,-3.4123756,16z/data=!4m5!3m4!1s0x0:0xff483a0288febaea!8m2!3d50.6139818!4d-3.4105736" target="_blank">Get Directions</a>
+        <p>Postcode: {{ venue.venue_postcode}}</p>
+        <p>Email: {{ venue.venue_email }}</p>
+
+    </section>
+</section>
